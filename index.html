@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+	 <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<style>
+	
+	@font-face {
+	font-family: 'SansationLight';
+	src: url('Sansation/Sansation_Light.eot');
+	src: local('Sansation/Sansation_Light'), url('Sansation/Sansation_Light.woff') format('woff'), 
+		url('Sansation/Sansation_Light.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_423">Text with this font applied</p> */
+.fontsforweb_fontid_423 {
+	font-family: 'SansationLight' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
+	
+	
+body, html {
+  height: 100%;
+  margin: 0;
+	font-family: 'SansationLight';
+	
+}
+	
+	
+	h1{
+		
+		font-family: 'SansationLight';
+		
+	}
+
+	
+	
+	
+.bgimg {
+  background-image: url('a.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: 'SansationLight';
+  font-size: 25px;
+}
+	
+	
+.topleft {
+  position: absolute;
+  top: 0;
+  right: 14px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+	font-family: 'SansationLight';
+	font-size:2vw;
+}
+
+	
+		.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+			
+	}	
+	
+	#demo{
+	color: whitesmoke;
+		font-size:4vw;
+	
+	}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+	
+	
+	
+</style>
+<body>
+
+<div class="bgimg">
+  <div class="topleft">
+    <p ><img src="Logo.png" style="max-width: 100px;"></p>
+  </div>
+  <div class="middle">
+    <h1> قريبا  </h1>
+    <hr>
+    <p id="demo"></p>
+  </div>
+  <div class="bottomleft">
+    <p>     </p>
+  </div>
+</div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Nov 1, 2020 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+  
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+  
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + " يوم  " + hours + " ساعة   "
+  + minutes +  " ذقيقة    " + seconds + " ثانية  ";
+  
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
+
